@@ -1416,6 +1416,8 @@ body {
     : { dir: "scroll-hero/frames",        count: 150, last: 146 };
   const FRAME_COUNT = SET.count;
   const LAST_INDEX  = SET.last;
+  // Mobile shows the whole 16:9 frame (letterboxed, no crop); desktop fills the viewport.
+  const FIT = isMobile ? "contain" : "cover";
   const framePath = (i) =>
     `${SET.dir}/frame_${String(i + 1).padStart(4, "0")}.webp`;
   const STATIC_FRAME = framePath(0);
@@ -1462,7 +1464,13 @@ body {
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     const ir = img.naturalWidth / img.naturalHeight, cr = cw / ch;
     let dw, dh;
-    if (cr > ir) { dw = cw; dh = cw / ir; } else { dh = ch; dw = ch * ir; }
+    if (FIT === "contain") {
+      // fit the whole frame inside the viewport (letterbox, never crop)
+      if (cr > ir) { dh = ch; dw = ch * ir; } else { dw = cw; dh = cw / ir; }
+    } else {
+      // cover: fill the viewport, crop the overflow
+      if (cr > ir) { dw = cw; dh = cw / ir; } else { dh = ch; dw = ch * ir; }
+    }
     ctx.clearRect(0, 0, cw, ch);
     ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
   }
