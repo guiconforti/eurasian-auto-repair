@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurasian Auto Repair — San Antonio's Premier Import &amp; European Specialist</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+:root {
+  --black:       #08080a;
+  --dark:        #0d0d10;
+  --surface:     #131316;
+  --card:        #18181c;
+  --card-hover:  #1f1f25;
+  --border:      #26262e;
+  --border-soft: #1e1e25;
+  --gold:        #d4a843;
+  --gold-lt:     #e9c06a;
+  --gold-dk:     #b08929;
+  --text:        #f0ede6;
+  --text-sub:    #b0aa9f;
+  --text-muted:  #706a60;
+  --green:       #3a9e68;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(8,8,10,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo-block { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
+.logo-name {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.logo-sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.header-nav a {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--text); }
+
+.header-actions { display: flex; align-items: center; gap: 1rem; }
+.header-phone {
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: color 0.18s;
+}
+.header-phone:hover { color: var(--gold); }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: background 0.18s, color 0.18s, transform 0.15s, box-shadow 0.18s;
+  white-space: nowrap;
+}
+.btn-gold {
+  background: var(--gold);
+  color: #000;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+}
+.btn-gold:hover {
+  background: var(--gold-lt);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(212,168,67,0.3);
+}
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-grid svg {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212,168,67,0.07) 0%,
+    rgba(212,168,67,0.02) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-line {
+  position: absolute;
+  top: 0;
+  right: 32%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(212,168,67,0.15) 30%, rgba(212,168,67,0.08) 70%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 7rem 2rem 5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.hero-h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+  font-weight: 900;
+  line-height: 1.06;
+  color: var(--text);
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-body {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 460px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.btn-hero-primary {
+  background: var(--gold);
+  color: #000;
+  padding: 0.88rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.btn-hero-primary:hover {
+  background: var(--gold-lt);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(212,168,67,0.28);
+}
+
+.btn-hero-ghost {
+  border: 1.5px solid var(--border);
+  color: var(--text-sub);
+  padding: 0.88rem 2rem;
+  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-hero-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.stat-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2.25rem;
+  position: relative;
+}
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-lt) 50%, transparent 100%);
+}
+
+.hero-card-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.cert-item {
+  background: var(--card);
+  border: 1px solid var(--border-soft);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.cert-item svg {
+  color: var(--gold);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.cert-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+.cert-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.hero-warranty {
+  background: rgba(212,168,67,0.06);
+  border: 1px solid rgba(212,168,67,0.2);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.hero-warranty svg { color: var(--gold); flex-shrink: 0; }
+.warranty-text { font-size: 0.82rem; color: var(--text-sub); line-height: 1.4; }
+.warranty-text strong { color: var(--text); font-weight: 600; }
+
+.trust-bar {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  overflow: hidden;
+}
+
+.trust-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.trust-pip {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.section { padding: 6rem 2rem; }
+.wrap { max-width: 1240px; margin: 0 auto; }
+
+.sec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+}
+.sec-eyebrow::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.sec-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+
+.sec-lead {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.services { background: var(--dark); }
+
+.services-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.svc-card {
+  background: var(--card);
+  padding: 1.8rem 1.6rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: background 0.22s;
+}
+.svc-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svc-card:hover { background: var(--card-hover); }
+.svc-card:hover::after { width: 100%; }
+
+.svc-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+  opacity: 0.9;
+}
+.svc-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+.svc-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.brands { background: var(--black); padding: 5rem 2rem; }
+.brands-hd { margin-bottom: 3rem; }
+.brands-cats { display: flex; flex-direction: column; gap: 2.25rem; }
+
+.brands-row-hd {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.brand-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.tag {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  transition: border-color 0.18s, color 0.18s;
+  cursor: default;
+}
+.tag:hover { border-color: rgba(212,168,67,0.5); color: var(--gold-lt); }
+
+.why { background: var(--surface); position: relative; overflow: hidden; }
+.why::before {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.why-layout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.why-quote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--text-sub);
+  line-height: 1.55;
+  padding-left: 1.6rem;
+  border-left: 2px solid var(--gold);
+  margin: 2rem 0 2.5rem;
+}
+
+.why-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.why-card {
+  background: var(--card);
+  padding: 1.75rem;
+  position: relative;
+  transition: background 0.2s;
+}
+.why-card:hover { background: var(--card-hover); }
+
+.why-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: rgba(212,168,67,0.12);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.03em;
+}
+
+.why-card-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  opacity: 0.8;
+}
+
+.why-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.why-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.locations { background: var(--dark); }
+
+.loc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.loc-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.loc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold) 0%, rgba(212,168,67,0.3) 60%, transparent 100%);
+}
+
+.loc-pill {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.2);
+  padding: 0.2rem 0.65rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.loc-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.loc-addr {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.loc-phone {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.75rem;
+  transition: color 0.18s;
+  font-family: 'DM Sans', sans-serif;
+}
+.loc-phone:hover { color: var(--gold-lt); }
+
+.hours-table { width: 100%; border-collapse: collapse; }
+.hours-table tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.hours-table tr:last-child { border-bottom: none; }
+.hours-table td {
+  font-size: 0.82rem;
+  padding: 0.42rem 0;
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+.hours-table td:first-child {
+  color: var(--text-sub);
+  font-weight: 500;
+  padding-right: 2rem;
+}
+.hours-table td:last-child { text-align: right; }
+
+.financing {
+  background: var(--black);
+  padding: 4.5rem 2rem;
+  text-align: center;
+}
+.fin-inner { max-width: 700px; margin: 0 auto; }
+
+.fin-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.fin-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fin-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.fin-logo {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+  padding: 0.6rem 1.4rem;
+  border-radius: 3px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: border-color 0.18s, color 0.18s;
+}
+.fin-logo:hover { border-color: var(--gold); color: var(--gold); }
+
+.cta-band {
+  background: linear-gradient(130deg, #b08929 0%, #d4a843 45%, #f0c558 100%);
+  padding: 5.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 24px,
+    rgba(0,0,0,0.04) 24px,
+    rgba(0,0,0,0.04) 25px
+  );
+  pointer-events: none;
+}
+.cta-inner { position: relative; z-index: 1; }
+
+.cta-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 0.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.cta-sub {
+  font-size: 1rem;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 2.25rem;
+  line-height: 1.5;
+}
+.btn-cta-dark {
+  display: inline-block;
+  background: #000;
+  color: var(--gold);
+  padding: 1rem 2.75rem;
+  border-radius: 3px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.18s, transform 0.15s;
+}
+.btn-cta-dark:hover { background: #111; transform: translateY(-2px); }
+
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-tagline {
+  font-size: 0.83rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+}
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.badge {
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.22rem 0.6rem;
+  border-radius: 2px;
+}
+
+.ft-col-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ft-loc { margin-bottom: 1.75rem; }
+.ft-loc-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+.ft-addr {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.ft-phone {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  margin-top: 0.2rem;
+  transition: color 0.18s;
+}
+.ft-phone:hover { color: var(--gold-lt); }
+
+.ft-svc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.ft-svc-list li { font-size: 0.8rem; color: var(--text-muted); }
+
+.ft-hours-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.ft-hours-list li {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ft-hours-list .day { color: var(--text-sub); font-weight: 500; }
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.hero-left .eyebrow   { animation: fadeUp 0.55s 0.05s ease both; }
+.hero-left .hero-h1   { animation: fadeUp 0.65s 0.12s ease both; }
+.hero-left .hero-body { animation: fadeUp 0.65s 0.2s  ease both; }
+.hero-left .hero-ctas { animation: fadeUp 0.65s 0.28s ease both; }
+.hero-left .hero-stats{ animation: fadeUp 0.65s 0.36s ease both; }
+.hero-right           { animation: fadeUp 0.75s 0.2s  ease both; }
+
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-right { max-width: 520px; }
+  .why-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-cards { grid-template-columns: 1fr; }
+  .loc-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 0.4rem; text-align: center; }
+  .hero-stats { gap: 1.75rem; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas { flex-direction: column; }
+  .btn-hero-primary, .btn-hero-ghost { text-align: center; justify-content: center; }
+  .services-grid { grid-template-columns: 1fr; }
+  .trust-inner { gap: 1rem; justify-content: flex-start; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; gap: 1.25rem; }
+}
+
+/* ===== Cinematic scroll-scrub intro ===== */
+.cine-track { position: relative; height: 300vh; background: var(--black); }
+.cine-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--black);
+}
+.cine-canvas { display: block; width: 100%; height: 100%; }
+.cine-static {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cine-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2rem 5rem;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(8,8,10,0.82) 0%,
+    rgba(8,8,10,0.35) 30%,
+    rgba(8,8,10,0) 60%
+  );
+}
+.cine-overlay-inner { max-width: 1240px; margin: 0 auto; width: 100%; }
+.cine-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+.cine-eyebrow::before { content: ''; display: block; width: 30px; height: 1px; background: var(--gold); }
+.cine-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  text-shadow: 0 2px 40px rgba(0,0,0,0.55);
+  max-width: 15ch;
+}
+.cine-title em { font-style: italic; color: var(--gold); }
+.cine-hint {
+  margin-top: 1.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.cine-hint .bar {
+  width: 34px; height: 1px; background: var(--gold); display: inline-block;
+  transform-origin: left; animation: cineBar 2s ease-in-out infinite;
+}
+@keyframes cineBar { 0%,100% { transform: scaleX(1); opacity: 0.55; } 50% { transform: scaleX(1.7); opacity: 1; } }
+.cine-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  background: var(--black);
+  transition: opacity 0.6s ease;
+}
+.cine-loader.hidden { opacity: 0; pointer-events: none; }
+.cine-loader-track { width: min(240px, 60vw); height: 2px; background: rgba(255,255,255,0.12); overflow: hidden; }
+.cine-loader-fill { height: 100%; width: 0%; background: var(--gold); transition: width 0.15s linear; }
+.cine-loader-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); }
+@media (max-width: 768px) { .cine-overlay { padding: 0 1.25rem 3rem; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-wrap">
+    <div class="logo-block">
+      <span class="logo-name">Eurasian Auto Repair</span>
+      <span class="logo-sub">San Antonio's Import Specialist</span>
+    </div>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#locations">Locations</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+12104906552" class="header-phone">(210) 490-6552</a>
+      <a href="tel:+12104906552" class="btn btn-gold">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<section class="cine-track" id="cine-track">
+  <div class="cine-stage" id="cine-stage">
+    <canvas class="cine-canvas" id="cine-canvas"></canvas>
+    <div class="cine-static" id="cine-static" hidden></div>
+    <div class="cine-overlay">
+      <div class="cine-overlay-inner">
+        <div class="cine-eyebrow">San Antonio's Import Specialist · Est. 1988</div>
+        <h2 class="cine-title">Every Import Has a <em>Heartbeat.</em></h2>
+        <div class="cine-hint" id="cine-hint"><span class="bar"></span> Scroll to begin</div>
+      </div>
+    </div>
+    <div class="cine-loader" id="cine-loader">
+      <div class="cine-loader-track"><div class="cine-loader-fill" id="cine-loader-fill"></div></div>
+      <div class="cine-loader-label" id="cine-loader-label">Loading 0%</div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-grid">
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="fine-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#22222a" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="coarse-grid" width="300" height="300" patternUnits="userSpaceOnUse">
+          <path d="M 300 0 L 0 0 0 300" fill="none" stroke="#2a2a36" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#fine-grid)"/>
+      <rect width="100%" height="100%" fill="url(#coarse-grid)"/>
+    </svg>
+  </div>
+  <div class="hero-glow"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content wrap">
+    <div class="hero-left">
+      <div class="eyebrow">San Antonio, TX &nbsp;·&nbsp; Est. 1988 &nbsp;·&nbsp; 2 Locations</div>
+      <h1 class="hero-h1">
+        Your Import<br>Deserves <em>Precision<br>Hands,</em> Not<br>Any Shop.
+      </h1>
+      <p class="hero-body">
+        San Antonio's most trusted European &amp; Asian auto repair specialist — ASE Master Certified, Bosch Authorized, AAA Approved. Thirty years of listening to engines that demand real expertise.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+12104906552" class="btn btn-hero-primary">Call (210) 490-6552</a>
+        <a href="#locations" class="btn btn-hero-ghost">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Find a Location
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">30+</div><div class="stat-label">Years in Business</div></div>
+        <div><div class="stat-num">40K</div><div class="stat-label">Mile Warranty</div></div>
+        <div><div class="stat-num">A+</div><div class="stat-label">BBB Rating</div></div>
+        <div><div class="stat-num">2</div><div class="stat-label">SA Locations</div></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-title">Credentials &amp; Certifications</div>
+        <div class="cert-grid">
+          <div class="cert-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div class="cert-name">ASE Master Certified</div>
+            <div class="cert-sub">Technicians</div>
+          </div>
+          <div class="cert-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <div class="cert-name">Bosch Service</div>
+            <div class="cert-sub">Authorized Center</div>
+          </div>
+          <div class="cert-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="cert-name">AAA Approved</div>
+            <div class="cert-sub">Texas Service Center</div>
+          </div>
+          <div class="cert-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="cert-name">Angi Super Service</div>
+            <div class="cert-sub">Award Winner</div>
+          </div>
+        </div>
+        <div class="hero-warranty">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div class="warranty-text">
+            <strong>4-Year / 40,000-Mile Warranty</strong> — Backed on every repair. One of the strongest guarantees in San Antonio.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-pip"></span>ASE Master Certified</div>
+    <div class="trust-item"><span class="trust-pip"></span>Bosch Service Center</div>
+    <div class="trust-item"><span class="trust-pip"></span>AAA Texas Approved</div>
+    <div class="trust-item"><span class="trust-pip"></span>BBB A+ Rating</div>
+    <div class="trust-item"><span class="trust-pip"></span>Angi Super Service Award</div>
+    <div class="trust-item"><span class="trust-pip"></span>EV Charging On-Site</div>
+    <div class="trust-item"><span class="trust-pip"></span>Free Rideshare Within 5 mi</div>
+  </div>
+</div>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="services-head">
+      <div>
+        <div class="sec-eyebrow">Full-Service Shop</div>
+        <h2 class="sec-title">Every Repair,<br>Every System.</h2>
+      </div>
+      <p class="sec-lead" style="max-width:440px">From routine maintenance to complex rebuilds — every service performed by import-specialized, ASE Master Certified technicians.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="11" x2="12" y2="15"/><line x1="10" y1="13" x2="14" y2="13"/></svg>
+        <div class="svc-name">Engine Repair</div>
+        <div class="svc-desc">Complete engine diagnostics, repair, and rebuilds for European and Asian imports.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="5" cy="12" r="3"/><circle cx="19" cy="5" r="3"/><circle cx="19" cy="19" r="3"/><path d="M8 12h3.5M15.7 6.3l-4.2 5M15.7 17.7l-4.2-5"/></svg>
+        <div class="svc-name">Transmission</div>
+        <div class="svc-desc">Automatic and manual transmission service, diagnostics, and rebuilds.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/></svg>
+        <div class="svc-name">Brake Repair</div>
+        <div class="svc-desc">Pads, rotors, calipers, and full hydraulic brake system service.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M8 2v20M16 2v20M2 12h20M2 7l3.5 5L2 17M22 7l-3.5 5 3.5 5"/></svg>
+        <div class="svc-name">Auto AC Repair</div>
+        <div class="svc-desc">AC diagnostics, recharge, compressor, and component replacement.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4"/><path d="M7 8h.01M11 8h6M7 12h10"/></svg>
+        <div class="svc-name">Car Diagnostics</div>
+        <div class="svc-desc">Factory-grade scan tools. Accurate fault diagnosis and check-engine analysis.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M3 17l3.5-3.5L10 17l3-3 3 3 3.5-3.5"/><circle cx="5" cy="20" r="2"/><circle cx="19" cy="20" r="2"/><path d="M5 18V10M19 18V10M5 10h14"/></svg>
+        <div class="svc-name">Suspension Repair</div>
+        <div class="svc-desc">Shocks, struts, control arms, and full suspension restoration.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="svc-name">Wheel Alignment</div>
+        <div class="svc-desc">Computer-controlled precision alignment for optimal handling and tire life.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+        <div class="svc-name">Cooling System</div>
+        <div class="svc-desc">Radiator, thermostat, water pump, and coolant flush service.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+        <div class="svc-name">Oil Changes</div>
+        <div class="svc-desc">Conventional, full-synthetic, and European-spec oil changes.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <div class="svc-name">EV &amp; Hybrid</div>
+        <div class="svc-desc">On-site EV charging. Hybrid system repair for Tesla, BMW, Toyota &amp; more.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10A15.3 15.3 0 0 1 8 12a15.3 15.3 0 0 1 4-10z"/></svg>
+        <div class="svc-name">Import Specialist</div>
+        <div class="svc-desc">European, Asian, and exotic vehicle expertise — factory-level precision.</div>
+      </div>
+      <div class="svc-card">
+        <svg class="svc-icon" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div class="svc-name">Fleet Services</div>
+        <div class="svc-desc">Scheduled maintenance and repair programs for commercial fleets.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="wrap">
+    <div class="brands-hd">
+      <div class="sec-eyebrow">Brands We Service</div>
+      <h2 class="sec-title">We Speak Every<br>Import Language.</h2>
+    </div>
+    <div class="brands-cats">
+      <div>
+        <div class="brands-row-hd">European</div>
+        <div class="brand-tags">
+          <span class="tag">Audi</span><span class="tag">BMW</span><span class="tag">Fiat</span><span class="tag">Jaguar</span><span class="tag">Land Rover</span><span class="tag">Maserati</span><span class="tag">Mercedes-Benz</span><span class="tag">MINI</span><span class="tag">Porsche</span><span class="tag">Smart</span><span class="tag">Sprinter</span><span class="tag">Volvo</span><span class="tag">Volkswagen</span>
+        </div>
+      </div>
+      <div>
+        <div class="brands-row-hd">Asian</div>
+        <div class="brand-tags">
+          <span class="tag">Acura</span><span class="tag">Genesis</span><span class="tag">Honda</span><span class="tag">Hyundai</span><span class="tag">Infiniti</span><span class="tag">Isuzu</span><span class="tag">Kia</span><span class="tag">Lexus</span><span class="tag">Mazda</span><span class="tag">Mitsubishi</span><span class="tag">Nissan</span><span class="tag">Subaru</span><span class="tag">Suzuki</span><span class="tag">Toyota</span>
+        </div>
+      </div>
+      <div>
+        <div class="brands-row-hd">EV &amp; Hybrid</div>
+        <div class="brand-tags">
+          <span class="tag">Tesla</span><span class="tag">BMW EV/Hybrid</span><span class="tag">Honda Hybrid</span><span class="tag">Hyundai EV</span><span class="tag">Kia EV</span><span class="tag">Lexus Hybrid</span><span class="tag">Mercedes EV</span><span class="tag">Porsche EV</span><span class="tag">Toyota Hybrid</span>
+        </div>
+      </div>
+      <div>
+        <div class="brands-row-hd">Exotic</div>
+        <div class="brand-tags">
+          <span class="tag">Bentley</span><span class="tag">Ferrari</span><span class="tag">Maserati</span><span class="tag">Mercedes-Maybach</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="why-layout">
+      <div class="why-left">
+        <div class="sec-eyebrow">Why Eurasian</div>
+        <h2 class="sec-title">Precision Born<br>from Three<br>Decades.</h2>
+        <blockquote class="why-quote">
+          "European cars have a different heartbeat. We've been listening to it for 30 years."
+        </blockquote>
+        <p class="sec-lead">Since 1988, we've specialized in the engineering nuances that make import vehicles different — and demanding. Our technicians don't just fix cars; they understand them.</p>
+      </div>
+      <div>
+        <div class="why-cards">
+          <div class="why-card">
+            <div class="why-num">01</div>
+            <svg class="why-card-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div class="why-title">4-Year / 40,000-Mile Warranty</div>
+            <div class="why-desc">One of the strongest repair guarantees in San Antonio. Full coverage on parts and labor, every repair.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-num">02</div>
+            <svg class="why-card-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m-1 11h6m-3-3l3 3-3 3"/><rect x="9" y="11" width="14" height="10" rx="2"/></svg>
+            <div class="why-title">Free Rideshare &amp; Pickup</div>
+            <div class="why-desc">Complimentary rideshare within 5 miles. Vehicle pickup and drop-off within 10 miles. After-hours drop-off available.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-num">03</div>
+            <svg class="why-card-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+            <div class="why-title">Flexible Financing</div>
+            <div class="why-desc">Finance repairs through Affirm, CFNA, Klarna, or Synchrony. Don't delay a critical repair — pay over time.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-num">04</div>
+            <svg class="why-card-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <div class="why-title">Digital Service History</div>
+            <div class="why-desc">Full service records, maintenance reminders, and repair history online — complete transparency, every visit.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section locations" id="locations">
+  <div class="wrap">
+    <div class="sec-eyebrow">Find Us</div>
+    <h2 class="sec-title">Two Locations<br>Serving San Antonio.</h2>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-pill">Location 01</div>
+        <div class="loc-name">San Pedro Ave.</div>
+        <div class="loc-addr">15327 San Pedro Ave.<br>San Antonio, TX 78232</div>
+        <a href="tel:+12104906552" class="loc-phone">(210) 490-6552</a>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Monday – Friday</td><td>7:00 am – 6:00 pm</td></tr>
+            <tr><td>Saturday</td><td>8:00 am – 12:00 pm</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="loc-card">
+        <div class="loc-pill">Location 02</div>
+        <div class="loc-name">North IH-35</div>
+        <div class="loc-addr">9523 North Interstate 35<br>San Antonio, TX 78233</div>
+        <a href="tel:+12106400470" class="loc-phone">(210) 640-0470</a>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Monday – Friday</td><td>7:00 am – 6:00 pm</td></tr>
+            <tr><td>Saturday</td><td>Closed</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="financing">
+  <div class="wrap fin-inner">
+    <div class="sec-eyebrow" style="justify-content:center">No Surprises. No Delays.</div>
+    <div class="fin-title">Flexible Financing<br>for Every Repair.</div>
+    <p class="fin-sub">Don't let timing delay a critical repair. Finance it through one of our trusted partners and spread payments — interest-free options available.</p>
+    <div class="fin-logos">
+      <div class="fin-logo">Affirm</div>
+      <div class="fin-logo">CFNA</div>
+      <div class="fin-logo">Klarna</div>
+      <div class="fin-logo">Synchrony</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-title">Your Import Deserves<br>the Right Shop.</div>
+    <p class="cta-sub">Book your appointment today — by phone or online. Drop-off available after hours.</p>
+    <a href="tel:+12104906552" class="btn-cta-dark">Call (210) 490-6552</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-block" style="margin-bottom:0.75rem">
+        <span class="logo-name">Eurasian Auto Repair</span>
+        <span class="logo-sub">San Antonio's Import Specialist</span>
+      </div>
+      <p class="footer-tagline">"European cars have a different heartbeat.<br>We've been listening to it for 30 years."</p>
+      <div class="badge-row">
+        <span class="badge">ASE Certified</span>
+        <span class="badge">Bosch Service</span>
+        <span class="badge">AAA Approved</span>
+        <span class="badge">BBB A+</span>
+        <span class="badge">Est. 1988</span>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-title">Locations</div>
+      <div class="ft-loc">
+        <div class="ft-loc-name">San Pedro Ave.</div>
+        <div class="ft-addr">15327 San Pedro Ave.<br>San Antonio, TX 78232</div>
+        <a href="tel:+12104906552" class="ft-phone">(210) 490-6552</a>
+      </div>
+      <div class="ft-loc">
+        <div class="ft-loc-name">North IH-35</div>
+        <div class="ft-addr">9523 North Interstate 35<br>San Antonio, TX 78233</div>
+        <a href="tel:+12106400470" class="ft-phone">(210) 640-0470</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-title">Services</div>
+      <ul class="ft-svc-list">
+        <li>Engine Repair</li><li>Transmission</li><li>Brake Repair</li><li>Auto AC Repair</li><li>Car Diagnostics</li><li>Suspension</li><li>Wheel Alignment</li><li>Oil Changes</li><li>Cooling System</li><li>EV &amp; Hybrid</li><li>Import Specialist</li><li>Fleet Services</li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-title">Hours</div>
+      <ul class="ft-hours-list">
+        <li><span class="day">San Pedro — Mon–Fri</span><span>7am–6pm</span></li>
+        <li><span class="day">San Pedro — Sat</span><span>8am–12pm</span></li>
+        <li><span class="day">IH-35 — Mon–Fri</span><span>7am–6pm</span></li>
+        <li><span class="day">IH-35 — Sat–Sun</span><span>Closed</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Eurasian Auto Repair — San Antonio, TX. All rights reserved.</span>
+    <span>Est. 1988 · ASE Master Certified · Bosch Authorized · AAA Approved</span>
+  </div>
+</footer>
+
+<script>
+/* ===== Cinematic scroll-scrub hero ===== */
+(() => {
+  "use strict";
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isMobile = window.matchMedia("(max-width: 768px), (pointer: coarse)").matches;
+
+  // Pick a frame set per device. Desktop: 150 frames @1600px (~8.6 MB). Mobile: a lighter
+  // 60 frames @720px (~1.4 MB) so phones don't download the full set.
+  // The source clip fades to black at the very end of the desktop set, so the desktop scrub
+  // stops on frame_0147 (last clean beauty shot). The mobile sampling never captured the fade.
+  const SET = isMobile
+    ? { dir: "scroll-hero/frames-mobile", count: 60,  last: 59  }
+    : { dir: "scroll-hero/frames",        count: 150, last: 146 };
+  const FRAME_COUNT = SET.count;
+  const LAST_INDEX  = SET.last;
+  const framePath = (i) =>
+    `${SET.dir}/frame_${String(i + 1).padStart(4, "0")}.webp`;
+  const STATIC_FRAME = framePath(0);
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+  const track   = document.getElementById("cine-track");
+  const stage   = document.getElementById("cine-stage");
+  const canvas  = document.getElementById("cine-canvas");
+  const staticEl= document.getElementById("cine-static");
+  const loader  = document.getElementById("cine-loader");
+  const fill    = document.getElementById("cine-loader-fill");
+  const label   = document.getElementById("cine-loader-label");
+  const hint    = document.getElementById("cine-hint");
+  const ctx     = canvas.getContext("2d");
+
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+  // ----- Reduced motion → static frame only, no scrub, collapse the runway (a11y) -----
+  if (reducedMotion) {
+    canvas.hidden = true;
+    staticEl.hidden = false;
+    staticEl.style.backgroundImage = `url("${STATIC_FRAME}")`;
+    track.style.height = "100vh";
+    loader.classList.add("hidden");
+    if (hint) hint.style.display = "none";
+    return;
+  }
+
+  // ----- Full scrub -----
+  const frames = new Array(FRAME_COUNT);
+  let loaded = 0, currentIndex = -1, ready = false;
+
+  function sizeCanvas() {
+    const cw = stage.clientWidth, ch = stage.clientHeight;
+    canvas.style.width = cw + "px";
+    canvas.style.height = ch + "px";
+    canvas.width  = Math.max(1, Math.round(cw * DPR));
+    canvas.height = Math.max(1, Math.round(ch * DPR));
+  }
+
+  function drawCover(img) {
+    if (!img || !img.complete || !img.naturalWidth) return;
+    const cw = stage.clientWidth, ch = stage.clientHeight;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    const ir = img.naturalWidth / img.naturalHeight, cr = cw / ch;
+    let dw, dh;
+    if (cr > ir) { dw = cw; dh = cw / ir; } else { dh = ch; dw = ch * ir; }
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
+  }
+
+  function progress() {
+    const rect = track.getBoundingClientRect();
+    const total = rect.height - window.innerHeight;
+    if (total <= 0) return 0;
+    return clamp(-rect.top / total, 0, 1);
+  }
+
+  let rafPending = false;
+  function requestRender() {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(render);
+  }
+  function render() {
+    rafPending = false;
+    const idx = clamp(Math.round(progress() * LAST_INDEX), 0, LAST_INDEX);
+    if (idx !== currentIndex) { currentIndex = idx; drawCover(frames[idx]); }
+  }
+
+  function onResize() {
+    sizeCanvas();
+    drawCover(frames[clamp(currentIndex, 0, LAST_INDEX)] || frames[0]);
+  }
+
+  function updateLoader() {
+    const pct = Math.round((loaded / FRAME_COUNT) * 100);
+    fill.style.width = pct + "%";
+    label.textContent = "Loading " + pct + "%";
+  }
+
+  function enableScrub() {
+    if (ready) return;
+    ready = true;
+    loader.classList.add("hidden");
+    window.addEventListener("scroll", requestRender, { passive: true });
+    render();
+  }
+
+  function preload() {
+    for (let i = 0; i < FRAME_COUNT; i++) {
+      const img = new Image();
+      img.decoding = "async";
+      const done = () => { loaded++; updateLoader(); if (loaded === FRAME_COUNT) enableScrub(); };
+      img.onload = () => { if (i === 0) drawCover(img); done(); };
+      img.onerror = done;
+      img.src = framePath(i);
+      frames[i] = img;
+    }
+  }
+
+  sizeCanvas();
+  updateLoader();
+  preload();
+
+  let resizeRaf = false;
+  window.addEventListener("resize", () => {
+    if (resizeRaf) return;
+    resizeRaf = true;
+    requestAnimationFrame(() => { resizeRaf = false; onResize(); });
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>
