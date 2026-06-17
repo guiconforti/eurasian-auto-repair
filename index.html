@@ -106,7 +106,7 @@ img, svg { display: block; }
 .header-nav a:hover::after { right: 0; }
 
 .header-actions { display: flex; align-items: center; gap: 1.25rem; }
-.header-phone { font-size: 0.9rem; color: var(--ink-2); text-decoration: none; font-weight: 500; transition: color 0.18s; }
+.header-phone { font-size: 0.9rem; color: var(--ink-2); text-decoration: none; font-weight: 500; transition: color 0.18s; white-space: nowrap; }
 .header-phone:hover { color: var(--gold); }
 
 .btn {
@@ -391,6 +391,9 @@ a:focus-visible, button:focus-visible, .tag:focus-visible { outline: 2px solid v
 }
 @media (max-width: 760px) {
   .header-nav { display: none; }
+  .header-wrap { padding: 0 1.1rem; gap: 0.7rem; }
+  .header-phone { font-size: 0.84rem; }
+  .logo-name { font-size: 0.95rem; }
   .svc-feature-grid { grid-template-columns: 1fr; }
   .svc-list { grid-template-columns: 1fr; }
   .brands-cats { grid-template-columns: 1fr; gap: 2rem; }
@@ -400,6 +403,10 @@ a:focus-visible, button:focus-visible, .tag:focus-visible { outline: 2px solid v
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 @media (max-width: 480px) {
+  .header-wrap { gap: 0.55rem; padding: 0 0.85rem; }
+  .header-phone { font-size: 0.8rem; }
+  .logo-sub { display: none; }
+  .btn-gold { padding: 0.5rem 0.95rem; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .btn-hero-primary, .btn-hero-ghost { width: 100%; }
   .proof { gap: 1.25rem; }
@@ -652,6 +659,21 @@ a:focus-visible, button:focus-visible, .tag:focus-visible { outline: 2px solid v
   </div>
 </section>
 
+<!-- Financing -->
+<section class="section financing">
+  <div class="wrap fin-inner reveal">
+    <span class="kicker" style="justify-content:center"><span class="rule"></span>No surprises, no delays</span>
+    <h2 class="fin-title display">Flexible financing<br>for every repair.</h2>
+    <p class="fin-sub">Don't let timing delay a critical repair. Finance it through one of our trusted partners and spread payments — interest-free options available.</p>
+    <div class="fin-logos">
+      <div class="fin-logo">Affirm</div>
+      <div class="fin-logo">CFNA</div>
+      <div class="fin-logo">Klarna</div>
+      <div class="fin-logo">Synchrony</div>
+    </div>
+  </div>
+</section>
+
 <!-- Why -->
 <section class="section why" id="why">
   <div class="wrap">
@@ -726,20 +748,6 @@ a:focus-visible, button:focus-visible, .tag:focus-visible { outline: 2px solid v
   </div>
 </section>
 
-<!-- Financing -->
-<section class="section financing">
-  <div class="wrap fin-inner reveal">
-    <span class="kicker" style="justify-content:center"><span class="rule"></span>No surprises, no delays</span>
-    <h2 class="fin-title display">Flexible financing<br>for every repair.</h2>
-    <p class="fin-sub">Don't let timing delay a critical repair. Finance it through one of our trusted partners and spread payments — interest-free options available.</p>
-    <div class="fin-logos">
-      <div class="fin-logo">Affirm</div>
-      <div class="fin-logo">CFNA</div>
-      <div class="fin-logo">Klarna</div>
-      <div class="fin-logo">Synchrony</div>
-    </div>
-  </div>
-</section>
 
 <!-- CTA band -->
 <div class="cta-band">
@@ -819,8 +827,8 @@ a:focus-visible, button:focus-visible, .tag:focus-visible { outline: 2px solid v
     : { dir: "scroll-hero/frames",        count: 150, last: 146 };
   const FRAME_COUNT = SET.count;
   const LAST_INDEX  = SET.last;
-  // Mobile shows the whole 16:9 frame (letterboxed, no crop); desktop fills the viewport.
-  const FIT = isMobile ? "contain" : "cover";
+  // Fill the viewport on every device (cover) so there are no letterbox black bars.
+  const FIT = "cover";
   const framePath = (i) =>
     `${SET.dir}/frame_${String(i + 1).padStart(4, "0")}.webp`;
   const STATIC_FRAME = framePath(0);
