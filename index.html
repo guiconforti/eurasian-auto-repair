@@ -1008,8 +1008,8 @@ body {
 .cine-loader-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); }
 @media (max-width: 768px) {
   .cine-overlay { padding: 0 1.25rem 3rem; }
-  /* reduced-motion fallback: show full 16:9, letterboxed, never cropped */
-  .cine-static { background-size: contain; background-color: var(--black); }
+  /* reduced-motion fallback: show full 16:9, pinned to top, never cropped */
+  .cine-static { background-size: contain; background-position: top center; background-color: var(--black); }
 }
 </style>
 </head>
@@ -1466,11 +1466,13 @@ body {
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     const ir = img.naturalWidth / img.naturalHeight;
     // Always show the full width of the 16:9 frame — never crop horizontally.
-    // Tall/portrait viewports (phones) letterbox top & bottom; wide viewports fill.
+    // Portrait (phones): pin the frame to the TOP (empty space falls below the headline).
+    // Wide viewports (desktop): the frame is taller than the viewport, so center the fill.
     const dw = cw;
     const dh = cw / ir;
+    const dy = dh < ch ? 0 : (ch - dh) / 2;
     ctx.clearRect(0, 0, cw, ch);
-    ctx.drawImage(img, 0, (ch - dh) / 2, dw, dh);
+    ctx.drawImage(img, 0, dy, dw, dh);
   }
 
   function progress() {
